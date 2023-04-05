@@ -1,0 +1,341 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: rgba(246, 246, 246, 1);
+    min-width: 1805px;
+    /*выключла адаптацию игрового поля, иначе все слипается*/
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+header {
+    position: fixed;
+    width: -webkit-fill-available;
+    height: 64px;
+    left: 0;
+    top: 0;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 6px rgba(44, 57, 121, 0.1);
+    border-radius: 0px 0px 16px 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+    gap: 10px;
+}
+
+button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+#nav-panel {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0;
+    gap: 16px;
+    height: 32px;
+    flex: none;
+    flex-grow: 0;
+}
+
+#nav-panel div {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 4px 12px;
+    gap: 10px;
+    flex: none;
+    flex-grow: 0;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.24px;
+    color: #373745;
+}
+
+#nav-panel .active {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 4px 12px;
+    gap: 10px;
+    background: #60C2AA;
+    border-radius: 200px;
+    color: white;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+a {
+   text-decoration: none;
+   color: #373745;
+   font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+#main-container {
+    margin-top: 64px;
+    padding: 80px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#subject-list {
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 24px;
+    width: 500px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(44, 57, 121, 0.09);
+    border-radius: 20px;
+}
+
+#subject-list h1 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    color: #373745;
+    margin: 0;
+}
+
+#subject-list > .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+#subject-list > .container > .subject-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+#subject-list .subject-name {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    color: #373745;
+}
+
+#subject-list .subject-percent {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    color: #898993;
+}
+
+#subject-list .subject-icon {
+    width: 24px;
+    height: 24px;
+}
+
+#subject-list .subject-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 4px;
+}
+
+#game-container {
+    width: 663px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#game-time {
+    width: fit-content;
+    padding: 24px;
+    background: #EDEDED;
+    border-radius: 12px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 34px;
+    line-height: 40px;
+    letter-spacing: 0.25px;
+    color: #373745;
+}
+
+#game-board {
+    width: 663px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 4px;
+}
+
+#game-board .cell {
+    width: 218.33px;
+    height: 218.33px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game-step {
+    width: 400px;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #373745;
+    box-shadow: 0px 4px 20px rgba(44, 57, 121, 0.09);
+    border-radius: 12px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    color: #FFFFFF;
+}
+
+#chat-container {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    padding: 0px;
+    margin-bottom: 88px;
+    gap: 20px;
+    width: 412px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.24px;
+    color: #373745;
+}
+
+.msgs-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    gap: 12px;
+}
+
+.msg-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+    gap: 8px;
+    max-width: 352px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 6px rgba(44, 57, 121, 0.1);
+}
+
+.msg-container.other {
+    align-self: flex-start;
+    border-radius: 16px 16px 16px 0px;
+}
+
+.msg-container.me {
+    align-self: flex-end;
+    border-radius: 16px 16px 0px 16px;
+}
+
+.msg-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    width: -webkit-fill-available;
+}
+
+.subject-name {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+}
+
+.subject-name.x {
+    color: #60C2AA;
+}
+.subject-name.zero {
+    color: #E38BAC;
+}
+
+.msg-header .time {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    color: #898993;
+}
+
+.msg-interactive-elements {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    gap: 12px;
+    width: -webkit-fill-available;
+}
+
+.msg-interactive-elements button {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 12px;
+    gap: 8px;
+    width: 48px;
+    height: 48px;
+    background: #60C2AA;
+    border-radius: 12px;
+}
+
+.msg-interactive-elements textarea {
+    resize: none;
+    width: -webkit-fill-available;
+    height: 48px;
+    max-height: max-content;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    gap: 8px;
+    background: #FFFFFF;
+    border: 1px solid #DCDCDF;
+    border-radius: 12px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.24px;
+    color: #373745;
+}

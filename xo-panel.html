@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="xo-panel.css">
+
+    <title>Крестики-нолики</title>
+</head>
+<body>
+<header>
+    <div id="logo"><img src="image/s-logo.svg"/></div>
+    <div id="nav-panel">
+        <div class="active">Игровое поле</div>
+        <div> <a href="score.html">Рейтинг</a></div>
+        <div>Активные игроки</div>
+        <div>История игр</div>
+        <div>Список игроков</div>
+    </div>
+    <button><img src="image/signout-icon.svg"/></button>
+</header>
+<div id="main-container">
+    <div id="subject-list">
+        <h1>Игроки</h1>
+        <div class="container">
+            <div class="subject-container">
+                <div><img class="subject-icon"
+                          src="image/zero.svg"/></div>
+                <div class="subject-info">
+                    <div class="subject-name">Пупкин Владелен Игоревич</div>
+                    <div class="subject-percent">63% побед</div>
+                </div>
+            </div>
+            <div class="subject-container">
+                <div><img class="subject-icon"
+                          src="image/x.svg"/></div>
+                <div class="subject-info">
+                    <div class="subject-name">Плюшкина Екатерина Викторовна</div>
+                    <div class="subject-percent">23% побед</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="game-container">
+        <div id="game-time">05:12</div>
+        <div id="game-board">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"><img src="image/xxl-x.svg"/></div>
+            <div class="cell"><img src="image/xxl-zero.svg"/></div>
+            <div class="cell"><img src="image/xxl-zero.svg"/></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"><img src="image/xxl-x.svg"/></div>
+            <div class="cell"></div>
+        </div>
+        <div id="game-step">Ходит&nbsp;<img src="image/zero.svg"/>&nbsp;Владелен Пупкин</div>
+    </div>
+    <div id="chat-container">
+        <div class="msgs-container">
+            <div class="msg-container other">
+                <div class="msg-header">
+                    <div class="subject-name x">Плюшкина Екатерина</div>
+                    <div class="time">13:40</div>
+                </div>
+                <div class="msg-body">Ну что, готовься к поражению!!1</div>
+            </div>
+            <div class="msg-container me">
+                <div class="msg-header">
+                    <div class="subject-name zero">Пупкин Владлен</div>
+                    <div class="time">13:41</div>
+                </div>
+                <div class="msg-body">Надо было играть за крестики. Розовый — мой не самый счастливый цвет</div>
+            </div>
+            <div class="msg-container me">
+                <div class="msg-header">
+                    <div class="subject-name zero">Пупкин Владлен</div>
+                    <div class="time">13:45</div>
+                </div>
+                <div class="msg-body">Я туплю...</div>
+            </div>
+            <div class="msg-container other">
+                <div class="msg-header">
+                    <div class="subject-name x">Плюшкина Екатерина</div>
+                    <div class="time">13:47</div>
+                </div>
+                <div class="msg-body">Отойду пока кофе попить, напиши в тг как сходишь</div>
+            </div>
+        </div>
+        <div class="msg-interactive-elements">
+            <textarea placeholder="Сообщение..."></textarea>
+            <button><img src="image/send-btn.svg"></button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
