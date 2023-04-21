@@ -339,3 +339,27 @@ a {
     letter-spacing: 0.24px;
     color: #373745;
 }
+
+
+
+.cross-active {
+    background-image: url('image/xxl-x.svg');
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    border: none;
+}
+
+.zero-active {
+    display: show;
+    content:'image/xxl-zero.svg';
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    border: none;
+}
+
